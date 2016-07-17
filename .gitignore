@@ -3,3 +3,4 @@ env/
 scratch.txt
 tokens.py
 old_code/
+test.db
