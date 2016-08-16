@@ -14,8 +14,8 @@ else:
     slack_outgoing_token = tokens.SLACK_OUTGOING_TOKEN
 
 # Actions that can be requested
-SOLO_ACTIONS = ['list', 'completed', 'mine', 'help', 'count']
-ARG_ACTIONS = ['add', 'delete']
+SOLO_ACTIONS = ['list', 'completed', 'mine', 'help']
+ARG_ACTIONS = ['add', 'delete', 'remove']
 
 import views
 from models import Desire
@@ -88,6 +88,7 @@ class Mog(object):
             'completed': self.list_completed_emoji,
             'add': self.add_emoji,
             'delete': self.delete_emoji,
+            'remove': self.delete_emoji,
             'mine': self.get_user_uncompleted_emoji,
             'help': self.get_help,
         }
