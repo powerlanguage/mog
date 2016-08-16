@@ -52,10 +52,9 @@ class Mog(object):
             self.set_error('Invalid token.')
             return
 
-        # check if user entered request
+        # check if user entered request, if not default to help
         if self.request_text == '':
-            self.set_error('No command found.')
-            return
+            self.request_text = 'help'
 
         split = self.request_text.split()
 
@@ -171,10 +170,8 @@ class Mog(object):
 
     def get_help(self):
         """Return help string."""
-        output = "Valid commands: {}".format(
-            ', '.join(ARG_ACTIONS + SOLO_ACTIONS)
-        )
-        output += ".\n\n"
-        output += "Request emoji that you'd like to see on Slack and see the "\
+        output = "Request emoji that you'd like to see on Slack and see the "\
             "most popular requests."
+        output += "\n\n"
+        output += "Valid commands: `add`, `delete`, `list`, `completed`, `mine`"
         return output
