@@ -36,10 +36,9 @@ def get_slack_emoji():
     all_slack_emoji = []
 
     # load stock emoji from file
-    with app.open_resource('../static/emoji-aliases.json') as f:
+    with app.open_resource('../static/emoji-names.json') as f:
         stock_emojis = json.load(f)
-        for category in stock_emojis:
-            all_slack_emoji += stock_emojis[category]
+        all_slack_emoji += stock_emojis
 
     # concat custom emoji by slack API call
     all_slack_emoji += sc.api_call('emoji.list')['emoji'].keys()

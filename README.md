@@ -1,6 +1,6 @@
 #MOG
 
-Emoji requester bot, designed to be used on as a [Slack slash command](https://api.slack.com/slash-commands).
+Emoji requester bot, designed to be used as a [Slack slash command](https://api.slack.com/slash-commands).
 
 Web app built with Flask.
 
@@ -12,3 +12,6 @@ A user in a slack channel can issue the following actions:
 * `completed` - Lists all completed emoji, ordered as above
 * `mine` - Lists all requests from current user
 * `help` - Help prompt
+
+
+Emoji names from: https://github.com/felixrieseberg/emoji-autocomplete
